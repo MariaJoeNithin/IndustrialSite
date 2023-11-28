@@ -849,5 +849,26 @@ animation: ent 3s ease 0s 1 normal none;
         </div>
       </section>
     </div>
+    <script>
+        $("document").ready(function () 
+            {
+        $("#about .col").each(function(index,element) 
+        {
+            $(element).waypoint(function(){
+                if (index%2==0) {
+                $(element).addClass("animate_animated animate_bounceInRight");
+            }
+            else{
+                $(element).addClass("animate_animated animate_bounceInLeft");
+            }
+            },{
+                offset:"20%",
+            })
+        }); 
+
+
+        });
+    </script>
+    
 </body>
 </html> 
