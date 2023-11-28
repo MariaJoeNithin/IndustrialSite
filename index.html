@@ -868,6 +868,19 @@ animation: ent 3s ease 0s 1 normal none;
                 offset:"50%",
             })
         }); 
+        $("#about .col").each(function(index,element) 
+        {
+            $(element).waypoint(function(){
+                if (index%2==0) {
+                $(element).removeClass("animate_animated animate_bounceInRight");
+            }
+            else{
+                $(element).removeClass("animate_animated animate_bounceInLeft");
+            }
+            },{
+                offset:"80%",
+            })
+        }); 
 
 
         });
