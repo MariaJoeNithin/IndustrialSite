@@ -881,6 +881,20 @@ animation: ent 3s ease 0s 1 normal none;
                 offset:"20%",
             })
         }); 
+                
+        $("#custom-cards .col").each(function(index,element) 
+        {
+            $(element).waypoint(function(){
+                if (index%2==0) {
+                $(element).addClass("animate_animated animate__fadeInUp");
+            }
+            else{
+                $(element).addClass("animate_animated animate__fadeInUp");
+            }
+            },{
+                offset:"50%",
+            })
+        }); 
 
 
         });
