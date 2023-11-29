@@ -15,12 +15,33 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="icon" type="image/x-icon" href="https://static.vecteezy.com/system/resources/previews/006/230/700/original/tech-letter-j-logo-futuristic-logo-template-with-green-and-blue-gradient-color-geometric-shape-usable-for-business-and-technology-logos-vector.jpg">
+        
+    <!-- Animate CSS CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />    
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- waypoint CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+      integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    
     <style>
       
       #home,#about,#services,#training,#project,#reviews,#contact
       {
         /* background-color: rgba(255, 255, 255, 0) !important; */
-          /* background-image: linear-gradient(to top right,#0b0d90,#755aea,#0b0d90); */
+          background-image: linear-gradient(to top gray,black,gray);
       min-height: 100vh;
       background-color: rgba(0, 0, 0, 0.25);
       backdrop-filter: blur(5px) !important;
@@ -41,7 +62,9 @@
         width: 100%;
         /* background-image: linear-gradient(to top right,#0b0d90,#755aea,#0b0d90); */
 
-      background-image: url(https://www.neweggbusiness.com/smartbuyer/wp-content/uploads/iStock-171347670.jpg) !important; 
+/*       background-image: url(https://www.neweggbusiness.com/smartbuyer/wp-content/uploads/iStock-171347670.jpg) !important;  */
+      background-image: url(https://milarainternational.com/wp-content/uploads/2021/09/AdobeStock_346176817-1024x673.jpeg) !important; 
+          background-image: linear-gradient(to top gray,black,gray);
       background-attachment: fixed;
       background-position: center; 
       background-repeat: no-repeat;
@@ -549,7 +572,7 @@ animation: ent 3s ease 0s 1 normal none;
         </div>
         
          
-          <div class="row p-3 justify-content-center gap-2 row-cols-1 row-cols-lg-2">
+          <div  id="servCnt" class="row p-3 justify-content-center gap-2 row-cols-1 row-cols-lg-2">
             <div class="col cnts p-2 col-lg-5">
               What you will lose out on:
               <ul>
@@ -829,5 +852,81 @@ animation: ent 3s ease 0s 1 normal none;
         </div>
       </section>
     </div>
+    <script>
+
+        $("document").ready(function () 
+            {
+
+              // $("#about").waypoint(
+              //   function () {
+              //     $("#about").addClass("animate__animated animate__bounceInRight");
+              //   },
+              //   {
+              //     offset: "50%",
+              //   }
+              // );
+
+              // $("#services").waypoint(
+              //   function () {
+              //     $("#services").addClass("animate__animated animate__bounceInLeft");
+              //   },
+              //   {
+              //     offset: "20%",
+              //   }
+              // );
+
+              // $("#training").waypoint(
+              //   function () {
+              //     $("#training").addClass("animate__animated animate__bounceInLeft");
+              //   },
+              //   {
+              //     offset: "20%",
+              //   }
+              // );
+
+              $("#about .col").each(function(index,element) 
+              {
+                  $(element).waypoint(function(){
+                      if (index%2==0) {
+                      $(element).addClass("animate_animated animate__shakeY");
+                  }
+                  else{
+                      $(element).addClass("animate_animated animate__backInUp");
+                  }
+                  },{
+                      offset:"20%",
+                  })
+              }); 
+
+              // $("#about .col").each(function(index,element) 
+              // {
+              //     $(element).waypoint(function(){
+              //         if (index%2==0) {
+              //         $(element).removeClass("animate_animated animate_bounceInRight");
+              //     }
+              //     else{
+              //         $(element).removeClass("animate_animated animate_bounceInLeft");
+              //     }
+              //     },{
+              //         offset:"20%",
+              //     })
+              // }); 
+
+              $("#custom-cards .col").each(function(index,element) 
+              {
+                  $(element).waypoint(function(){
+                      if (index%2==0) {
+                      $(element).addClass("animate_animated animate__fadeInUp");
+                  }
+                  else{
+                      $(element).addClass("animate_animated animate__fadeInUp");
+                  }
+                  },{
+                      offset:"50%",
+                  })
+              }); 
+            });
+    </script>
+    
 </body>
 </html> 
