@@ -926,6 +926,54 @@ animation: ent 3s ease 0s 1 normal none;
                   })
               }); 
             });
+=======
+        $("document").ready(function () 
+            {
+        $("#about .col").each(function(index,element) 
+        {
+            $(element).waypoint(function(){
+                if (index%2==0) {
+                $(element).addClass("animate_animated animate_bounceInRight");
+            }
+            else{
+                $(element).addClass("animate_animated animate_bounceInLeft");
+            }
+            },{
+                offset:"50%",
+            })
+        }); 
+        
+        $("#about .col").each(function(index,element) 
+        {
+            $(element).waypoint(function(){
+                if (index%2==0) {
+                $(element).removeClass("animate_animated animate_bounceInRight");
+            }
+            else{
+                $(element).removeClass("animate_animated animate_bounceInLeft");
+            }
+            },{
+                offset:"20%",
+            })
+        }); 
+                
+        $("#custom-cards .col").each(function(index,element) 
+        {
+            $(element).waypoint(function(){
+                if (index%2==0) {
+                $(element).addClass("animate_animated animate__fadeInUp");
+            }
+            else{
+                $(element).addClass("animate_animated animate__fadeInUp");
+            }
+            },{
+                offset:"50%",
+            })
+        }); 
+
+
+        });
+>>>>>>> 1b7f94427f78ed6aa275a1056938a3b071c4174a
     </script>
     
 </body>
